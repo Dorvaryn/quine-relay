@@ -31,7 +31,7 @@ QR.bash: QR.scm
 	@echo "##  Scheme -> Shell  ##"
 	@echo "#######################"
 	@echo
-	gosh QR.scm > QR.bash
+	guile QR.scm > QR.bash
 
 QR.st: QR.bash
 	@echo
@@ -130,7 +130,7 @@ QR.c: QR.bf
 	@echo "##  Brainfuck -> C  ##"
 	@echo "######################"
 	@echo
-	beef QR.bf > QR.c
+	brainfuck QR.bf > QR.c
 
 QR.cpp: QR.c
 	@echo
@@ -165,7 +165,7 @@ QR.cob: QR.clj
 	@echo "##  Clojure -> Cobol  ##"
 	@echo "########################"
 	@echo
-	clojure QR.clj > QR.cob
+	java -jar /usr/share/clojure/clojure.jar QR.clj > QR.cob
 
 QR.coffee: QR.cob
 	@echo
